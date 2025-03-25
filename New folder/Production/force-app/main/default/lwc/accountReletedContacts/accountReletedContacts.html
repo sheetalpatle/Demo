@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Related Contacts">
+        <lightning-datatable
+            key-field="Id"
+            data={contacts}
+            columns={columns}
+            onsave={handleSave}
+            draft-values={draftValues}
+            onrowselection={handleRowSelection}>>
+        </lightning-datatable><br>
+
+        <lightning-button
+            label="Delete Selected"
+            variant="Brand"
+            onclick={handleDelete}
+            class="slds-m-top_medium">
+        </lightning-button>
+    </lightning-card>
+</template>
