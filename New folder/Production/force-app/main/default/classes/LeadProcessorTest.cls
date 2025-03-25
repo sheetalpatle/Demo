@@ -21,5 +21,9 @@ public class LeadProcessorTest {
              System.assertEquals(200, [select count() from Lead where LeadSource = 'Dreamforce']);
 
     }
+    @isTest
+    static void testLeads(){
+        
+    }
     
 }
