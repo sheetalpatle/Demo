@@ -23,7 +23,10 @@ public class LeadProcessorTest {
     }
     @isTest
     static void testLeads(){
+
+    }
+    @isTest
+    static void testLeads2(){
         
     }
-    
 }
