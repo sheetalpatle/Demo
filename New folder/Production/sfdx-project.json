@@ -1,12 +1,28 @@
 {
   "packageDirectories": [
     {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "MyManagedPackage",
+      "versionDescription": "Managed Package Description"
+    },
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "force-app",
+      "default": false,
+      "package": "MyManagedPackagetTest",
+      "versionDescription": "Managed Package Description"
     }
   ],
   "name": "Production",
-  "namespace": "",
+  "namespace": "NJPSA",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "63.0"
+  "sourceApiVersion": "63.0",
+  "packageAliases": {
+    "MyManagedPackage": "0HogK00000003dpSAA",
+    "MyManagedPackagetTest": "0HoNS0000000DYL0A2"
+  }
 }

@@ -14,10 +14,9 @@ public with sharing class AccountController {
         try{
         list<Contact> contactToDelete = [SELECT Id,Name FROM Contact WHERE Id =:contactIds];
         delete contactToDelete;
+
         }catch(Exception e){
             throw new AuraHandledException(e.getMessage());
         }
     }
-    // This is to check git
-    //Testing stage 
 }

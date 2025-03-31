@@ -1,23 +1,29 @@
 @isTest
 public class AccountProcessorTest {
-	@isTest
-    public static void TestAccountProcessorTest() {
-        Account acc = new Account();
-            acc.Name = 'test account';
-            insert acc;
-       
-        Contact con = new Contact();
-        	con.LastName = 'test contact';
-        	con.AccountId = acc.Id;
-        	insert con;
-        set<Id> setId = new set<Id>();
-        	setId.add(acc.Id);
-        Test.startTest();
-        	AccountProcessor.countContacts(setId);
-        Test.stopTest();
+    
+    @isTest
+    public static void testFunc() {
+        account acc = new account();
+        acc.name = 'MATW INC';
+        insert acc;
         
-        Account count = [select Number_Of_Contacts__c from Account where Id =:acc.Id];
-        system.assertEquals(1,integer.valueOf(count.Number_Of_Contacts__c));
-        	
+        contact con = new contact();
+        con.lastname = 'Mann1';
+        con.AccountId = acc.Id;
+        insert con;
+        contact con1 = new contact();
+        con1.lastname = 'Mann2';
+        con1.AccountId = acc.Id;
+        insert con1;
+        
+        
+        List<Id> acc_list = new List<Id>();
+        acc_list.add(acc.Id);
+        Test.startTest();
+        	AccountProcessor.countContacts(acc_list);
+        Test.stopTest();
+        List<account> acc1 = new List<account>([select Number_of_Contacts__c from account where id = :acc.id]);
+        system.assertEquals(2,acc1[0].Number_of_Contacts__c);
     }
+
 }

@@ -159,8 +159,4 @@ export default class AccountDetail extends LightningElement {
     showToast(title, message, variant) {
         this.dispatchEvent(new ShowToastEvent({ title, message, variant }));
     }
-    // hhbb
-    // jhjh
-    // hvjhv
-    // hbhb
 }
