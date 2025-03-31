@@ -18,6 +18,7 @@ public class LeadProcessor implements Database.Batchable<sObject>, Database.Stat
     }
     public void finish(database.BatchableContext BC){
          System.debug(recordProcessed + ' records processed. Shazam!');
+        //  Database.batacth(new LeadProcessor());
     }
 
 }

@@ -5,6 +5,7 @@ public class MixDmlClass {
         acc.Name = 'Sheetal2';
         insert acc;
         avoidMixDmlError();
+        //addin comments for checking
        
     }
     @future
@@ -17,8 +18,8 @@ public class MixDmlClass {
             localesidkey='en_US', profileid = p.Id, userroleid = ur.Id,
             timezonesidkey='America/Los_Angeles', 
             username='sheetal.patle@ngauge.digital');
-        	
-        	insert us;
+            
+            insert us;
     }
     
 }
